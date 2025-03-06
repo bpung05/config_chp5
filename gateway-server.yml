@@ -15,6 +15,9 @@ spring:
   cloud:
     loadbalancer.ribbon.enabled: false
     gateway:
+        discovery.locator:
+          enabled: true
+          lowerCaseServiceId: true
         routes:
         - id: organization-service
           uri: lb://organization-service
@@ -36,5 +39,7 @@ management:
     web:
       exposure:
         include: "*"
-        
+  endpoint:
+    gateway:
+      enabled: true
         
