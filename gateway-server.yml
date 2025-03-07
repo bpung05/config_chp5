@@ -31,18 +31,18 @@ spring:
           - Path=/license/**
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
-          - id: google-com
-            uri: https://www.google.com
-            predicates:
-              - Path=/google/**
-            filters:
-              - RewritePath=/google/(?<path>.*), /$\{path}
-          - id: baylor-edu
-            uri: https://www.baylor.edu
-            predicates:
-              - Path=/baylor/**
-            filters:
-              - RewritePath=/baylor/(?<path>.*), /$\{path}
+        - id: google-com
+          uri: https://www.google.com
+          predicates:
+            - Path=/google/**
+          filters:
+            - RewritePath=/google/(?<path>.*), /$\{path}
+        - id: baylor-edu
+          uri: https://www.baylor.edu
+          predicates:
+            - Path=/baylor/**
+          filters:
+            - RewritePath=/baylor/(?<path>.*), /$\{path}
                 
 management:
   endpoints:
