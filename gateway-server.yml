@@ -31,12 +31,7 @@ spring:
           - Path=/license/**
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
-        - id: google-com
-          uri: https://www.google.com
-          predicates:
-            - Path=/google/**
-          filters:
-            - RewritePath=/google/(?<path>.*), /$\{path}
+        
 
 
        
